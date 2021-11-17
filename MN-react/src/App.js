@@ -8,7 +8,6 @@ import {
 } from "@material-ui/core/styles/";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
-
 // Redux
 import { Provider } from "react-redux";
 import store from "./redux/store";
@@ -18,9 +17,9 @@ import { logoutUser, getUserData } from "./redux/actions/userActions"
 import Navbar from "./components/Navbar";
 import AuthRoute from "./util/AuthRoute";
 //Pages
-import home from "./pages/home";
 import login from "./pages/login";
 import signup from "./pages/signup";
+import Home from "./pages/home";
 
 const theme = createMuiTheme({
   direction: "rtl",
@@ -50,7 +49,7 @@ function App() {
             <Navbar />
             <div className="container">
               <Switch>
-                <Route exact path="/" component={home} />
+                <Route exact path="/" component={Home} />
                 <AuthRoute
                   exact
                   path="/login"
